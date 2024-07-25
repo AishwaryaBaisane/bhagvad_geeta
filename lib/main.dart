@@ -4,18 +4,15 @@ import 'package:bhagvad_geeta/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'Screens/DeatailPage/Detail_Page_Provider/provider.dart';
 import 'Screens/HomePage/Provider/home_page_provider.dart';
 import 'Theme_Provider/ThemeProvider.dart';
 
-bool isTrue = false;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   bool theme = sharedPreferences.getBool('theme') ?? false;
-  isTrue = theme;
   runApp(
     MultiProvider(
       providers: [
