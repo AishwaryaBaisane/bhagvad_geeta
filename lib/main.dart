@@ -8,7 +8,6 @@ import 'Screens/DeatailPage/Detail_Page_Provider/provider.dart';
 import 'Screens/HomePage/Provider/home_page_provider.dart';
 import 'Theme_Provider/ThemeProvider.dart';
 
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
