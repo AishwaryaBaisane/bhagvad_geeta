@@ -22,7 +22,6 @@ class HomePage extends StatelessWidget {
         Provider.of<ThemeChange>(context, listen: false);
     return SafeArea(
       child: Scaffold(
-        // backgroundColor: Color(0xffdd9827),
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.primary,

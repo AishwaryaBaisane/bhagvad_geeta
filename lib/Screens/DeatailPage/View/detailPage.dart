@@ -195,7 +195,6 @@ class detailPage extends StatelessWidget {
                             ],
                           ),
                         ),
-
                         Container(
                           height: height * 0.4,
                           width: width * 0.95,
