@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import '../../Theme_Provider/ThemeProvider.dart';
 import '../../provider/Geeta_Provider.dart';
 import '../DeatailPage/Detail_Page_Provider/provider.dart';
 import '../HomePage/Provider/home_page_provider.dart';

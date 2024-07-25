@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Screens/DeatailPage/Detail_Page_Provider/provider.dart';
 import 'Screens/HomePage/Provider/home_page_provider.dart';
+import 'Theme_Provider/ThemeProvider.dart';
 
 bool isTrue = false;
 

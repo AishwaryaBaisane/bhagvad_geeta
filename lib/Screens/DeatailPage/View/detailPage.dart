@@ -9,16 +9,14 @@ import 'dart:ui' as ui;
 import 'package:share_extend/share_extend.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 
+import '../../../Theme_Provider/ThemeProvider.dart';
 import '../../../provider/Geeta_Provider.dart';
+import '../../../utils/GlobalData.dart';
 import '../../HomePage/Provider/home_page_provider.dart';
 import '../../HomePage/view/homePage.dart';
 import '../Detail_Page_Provider/provider.dart';
 
-// GlobalKey imgKey = GlobalKey();
 List<GlobalKey> imgKey = List.generate(50, (index) => GlobalKey());
-
-// List<GlobalKey> imgKey =
-// List.generate(30, (index) => GlobalKey());
 
 class detailPage extends StatelessWidget {
   const detailPage({super.key});
@@ -77,8 +75,14 @@ class detailPage extends StatelessWidget {
                 print(detailPageProvider.favoriteList);
               },
               icon: (detailPageProvider.fav)
-                  ? Icon(Icons.favorite,size: 30,)
-                  : Icon(Icons.favorite_border,size: 30,),
+                  ? Icon(
+                      Icons.favorite,
+                      size: 30,
+                    )
+                  : Icon(
+                      Icons.favorite_border,
+                      size: 30,
+                    ),
             ),
             SizedBox(
               width: width * 0.03,
@@ -190,7 +194,10 @@ class detailPage extends StatelessWidget {
                             color: Theme.of(context).colorScheme.onPrimary,
                             fontSize: 25,
                             shadows: [
-                              Shadow(color: Colors.white, blurRadius: 15,)
+                              Shadow(
+                                color: Colors.white,
+                                blurRadius: 15,
+                              )
                             ],
                           ),
                         ),

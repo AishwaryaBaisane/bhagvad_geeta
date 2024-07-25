@@ -30,7 +30,7 @@ class SpleshScreen extends StatelessWidget {
         ),
         child: Center(
           child: Container(
-            width: width * 0.9 ,
+            width: width * 0.9,
             decoration: BoxDecoration(color: Colors.black38),
             child: Text(
               ' || श्रीमद् भगवत् गीता ||',
