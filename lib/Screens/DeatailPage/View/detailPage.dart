@@ -148,86 +148,116 @@ class detailPage extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: gitaProvider.gitaModalList[selectIndex].verses.length,
             itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.only(bottom: 50, left: 20),
+              padding: const EdgeInsets.only(bottom: 0, left: 20),
               child: Center(
                 child: RepaintBoundary(
                   key: imgKey[index],
                   child: Container(
-                    height: height * 0.8,
+                    height: height * 0.9,
                     width: width * 0.9,
                     child: Column(
                       children: [
                         SizedBox(
-                          height: height * 0.1,
+                          height: height * 0.12,
                         ),
-                        Text(
-                          '~: श्लोक :~\n',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                            fontSize: 25,
-                            shadows: [
-                              Shadow(
-                                color: Colors.white,
-                                blurRadius: 15,
+                        Container(
+                          height: height * 0.33,
+                          width: width * 0.9,
+                          child: Column(
+                            children: [
+                              Text(
+                                '~: श्लोक :~\n',
+                                style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 25,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.white,
+                                      blurRadius: 15,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Text(
+                                textAlign: TextAlign.center,
+                                gitaProvider.gitaModalList[selectIndex]
+                                    .verses[index].language.Sanskrit,
+                                style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 25,
+                                  shadows: [
+                                    Shadow(color: Colors.white, blurRadius: 15)
+                                  ],
+                                ),
                               ),
                             ],
                           ),
                         ),
-                        Text(
-                          textAlign: TextAlign.center,
-                          gitaProvider.gitaModalList[selectIndex].verses[index]
-                              .language.Sanskrit,
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                            fontSize: 25,
-                            shadows: [
-                              Shadow(color: Colors.white, blurRadius: 15)
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: height * 0.05,
-                        ),
-                        Text(
-                          '\n|| अनुवाद ||\n',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                            fontSize: 25,
-                            shadows: [
-                              Shadow(
-                                color: Colors.white,
-                                blurRadius: 15,
-                              )
-                            ],
-                          ),
-                        ),
-                        Text(
-                          textAlign: TextAlign.center,
-                          (homePageProviderTrue.selectLanguage == 'Sanskrit')
-                              ? gitaProvider.gitaModalList[selectIndex]
-                                  .verses[index].language.Sanskrit
-                              : (homePageProviderTrue.selectLanguage == 'Hindi')
-                                  ? gitaProvider.gitaModalList[selectIndex]
-                                      .verses[index].language.Hindi
-                                  : (homePageProviderTrue.selectLanguage ==
-                                          'English')
-                                      ? gitaProvider.gitaModalList[selectIndex]
-                                          .verses[index].language.English
-                                      : gitaProvider.gitaModalList[selectIndex]
-                                          .verses[index].language.Gujarati,
-                          // gitaProvider.gitaModalList[selectIndex].verses[index]
-                          //     .language.Sanskrit,
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
-                            fontSize: 25,
-                            shadows: [
-                              Shadow(
-                                color: Colors.white,
-                                blurRadius: 15,
+
+                        Container(
+                          height: height * 0.4,
+                          width: width * 0.95,
+                          child: Column(
+                            children: [
+                              Text(
+                                '\n|| अनुवाद ||\n',
+                                style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 25,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.white,
+                                      blurRadius: 15,
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Text(
+                                textAlign: TextAlign.center,
+                                (homePageProviderTrue.selectLanguage ==
+                                        'Sanskrit')
+                                    ? gitaProvider.gitaModalList[selectIndex]
+                                        .verses[index].language.Sanskrit
+                                    : (homePageProviderTrue.selectLanguage ==
+                                            'Hindi')
+                                        ? gitaProvider
+                                            .gitaModalList[selectIndex]
+                                            .verses[index]
+                                            .language
+                                            .Hindi
+                                        : (homePageProviderTrue
+                                                    .selectLanguage ==
+                                                'English')
+                                            ? gitaProvider
+                                                .gitaModalList[selectIndex]
+                                                .verses[index]
+                                                .language
+                                                .English
+                                            : gitaProvider
+                                                .gitaModalList[selectIndex]
+                                                .verses[index]
+                                                .language
+                                                .Gujarati,
+                                // gitaProvider.gitaModalList[selectIndex].verses[index]
+                                //     .language.Sanskrit,
+                                style: TextStyle(
+                                  color:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                  fontSize: 25,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.white,
+                                      blurRadius: 15,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
