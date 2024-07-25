@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
@@ -8,12 +7,10 @@ import 'package:provider/provider.dart';
 import 'dart:ui' as ui;
 import 'package:share_extend/share_extend.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-
 import '../../../Theme_Provider/ThemeProvider.dart';
 import '../../../provider/Geeta_Provider.dart';
 import '../../../utils/GlobalData.dart';
 import '../../HomePage/Provider/home_page_provider.dart';
-import '../../HomePage/view/homePage.dart';
 import '../Detail_Page_Provider/provider.dart';
 
 List<GlobalKey> imgKey = List.generate(50, (index) => GlobalKey());
