@@ -161,7 +161,7 @@ class detailPage extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              Text(
+                              SelectableText(
                                 textAlign: TextAlign.center,
                                 gitaProvider.gitaModalList[selectIndex]
                                     .verses[index].language.Sanskrit,
@@ -210,7 +210,7 @@ class detailPage extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                Text(
+                                SelectableText(
                                   textAlign: TextAlign.center,
                                   (homePageProviderTrue.selectLanguage ==
                                           'Sanskrit')
