@@ -1,5 +1,6 @@
 import 'package:bhagvad_geeta/provider/Geeta_Provider.dart';
 import 'package:bhagvad_geeta/routes/routes.dart';
+import 'package:bhagvad_geeta/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -39,22 +40,21 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
           colorScheme: ColorScheme.dark(
-            primary: Color(0xffeb6c03),
+            primary: Orange,
             onPrimary: Colors.black,
-            secondary: Color(0xffde9024),
+            secondary: LightOrange,
           ),
         ),
         darkTheme: ThemeData(
           colorScheme: ColorScheme.dark(
-            primary: Color(0xff0c0c0c),
+            primary: DarkBlack,
             onPrimary: Colors.white,
-            secondary: Color(0xff1f1f1f),
+            secondary: LightBlack,
           ),
         ),
         themeMode: Provider.of<ThemeChange>(context).isDark
