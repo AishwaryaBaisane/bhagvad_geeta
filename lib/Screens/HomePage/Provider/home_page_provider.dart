@@ -7,4 +7,8 @@ class HomePageProvider extends ChangeNotifier {
     selectLanguage = value;
     notifyListeners();
   }
+  HomePageProvider()
+  {
+    setLanguage(selectLanguage);
+  }
 }

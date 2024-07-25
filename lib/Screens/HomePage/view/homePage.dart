@@ -156,7 +156,7 @@ class HomePage extends StatelessWidget {
           // color: Color(0xffdd9827),
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/img/12.jpg'), fit: BoxFit.cover),
+                image: AssetImage('assets/img/homePage.jpg'), fit: BoxFit.cover),
           ),
           child: ListView.builder(
             // scrollDirection: Axis.horizontal,
@@ -197,7 +197,7 @@ class HomePage extends StatelessWidget {
                               style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w400,
-                                fontSize: 28,
+                                fontSize: 25,
                               ),
                             ),
                           ),

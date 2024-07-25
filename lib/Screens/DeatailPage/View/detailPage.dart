@@ -116,28 +116,7 @@ class detailPage extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: (themeChange.isDark)
-                    ? (selectIndex == 0)
-                        ? AssetImage('assets/img/1.jpg')
-                        : (selectIndex == 1)
-                            ? AssetImage('assets/img/2.jpg')
-                            : (selectIndex == 2)
-                                ? AssetImage('assets/img/3.jpg')
-                                : (selectIndex == 3)
-                                    ? AssetImage('assets/img/4.jpg')
-                                    : (selectIndex == 4)
-                                        ? AssetImage('assets/img/5.jpg')
-                                        : (selectIndex == 5)
-                                            ? AssetImage('assets/img/6.jpg')
-                                            : (selectIndex == 6)
-                                                ? AssetImage('assets/img/7.jpg')
-                                                : (selectIndex == 7)
-                                                    ? AssetImage(
-                                                        'assets/img/8.jpg')
-                                                    : (selectIndex == 8)
-                                                        ? AssetImage(
-                                                            'assets/img/9.jpg')
-                                                        : AssetImage(
-                                                            'assets/img/9.jpg')
+                    ? AssetImage(ImgList[selectIndex])
                     : AssetImage('assets/img/basuri2.png'),
                 fit: (themeChange.isDark) ? BoxFit.cover : null),
           ),
@@ -150,7 +129,7 @@ class detailPage extends StatelessWidget {
                 child: RepaintBoundary(
                   key: imgKey[index],
                   child: Container(
-                    height: height * 0.9,
+                    height: height * 0.99,
                     width: width * 0.9,
                     child: Column(
                       children: [
@@ -160,8 +139,14 @@ class detailPage extends StatelessWidget {
                         Container(
                           height: height * 0.33,
                           width: width * 0.9,
+                          decoration: BoxDecoration(
+                            color: (themeChange.isDark) ? Colors.black26 : null,
+                          ),
                           child: Column(
                             children: [
+                              SizedBox(
+                                height: height * 0.05,
+                              ),
                               Text(
                                 '~: श्लोक :~\n',
                                 style: TextStyle(
@@ -183,7 +168,7 @@ class detailPage extends StatelessWidget {
                                 style: TextStyle(
                                   color:
                                       Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 25,
+                                  fontSize: 20,
                                   shadows: [
                                     Shadow(color: Colors.white, blurRadius: 15)
                                   ],
@@ -192,66 +177,81 @@ class detailPage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        SizedBox(
+                          height: height * 0.05,
+                        ),
                         Container(
-                          height: height * 0.4,
+                          height: height * 0.33,
                           width: width * 0.95,
-                          child: Column(
-                            children: [
-                              Text(
-                                '\n|| अनुवाद ||\n',
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 25,
-                                  shadows: [
-                                    Shadow(
-                                      color: Colors.white,
-                                      blurRadius: 15,
-                                    )
-                                  ],
+                          decoration: BoxDecoration(
+                            color: (themeChange.isDark) ? Colors.black26 : null,
+                            // borderRadius: BorderRadius.only(
+                            //   bottomLeft: Radius.circular(15),
+                            //   bottomRight: Radius.circular(15),
+                            // ),
+                          ),
+                          child: Center(
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: height * 0.05,
                                 ),
-                              ),
-                              Text(
-                                textAlign: TextAlign.center,
-                                (homePageProviderTrue.selectLanguage ==
-                                        'Sanskrit')
-                                    ? gitaProvider.gitaModalList[selectIndex]
-                                        .verses[index].language.Sanskrit
-                                    : (homePageProviderTrue.selectLanguage ==
-                                            'Hindi')
-                                        ? gitaProvider
-                                            .gitaModalList[selectIndex]
-                                            .verses[index]
-                                            .language
-                                            .Hindi
-                                        : (homePageProviderTrue
-                                                    .selectLanguage ==
-                                                'English')
-                                            ? gitaProvider
-                                                .gitaModalList[selectIndex]
-                                                .verses[index]
-                                                .language
-                                                .English
-                                            : gitaProvider
-                                                .gitaModalList[selectIndex]
-                                                .verses[index]
-                                                .language
-                                                .Gujarati,
-                                // gitaProvider.gitaModalList[selectIndex].verses[index]
-                                //     .language.Sanskrit,
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 25,
-                                  shadows: [
-                                    Shadow(
-                                      color: Colors.white,
-                                      blurRadius: 15,
-                                    ),
-                                  ],
+                                Text(
+                                  '|| अनुवाद ||\n',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                    fontSize: 25,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.white,
+                                        blurRadius: 15,
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  textAlign: TextAlign.center,
+                                  (homePageProviderTrue.selectLanguage ==
+                                          'Sanskrit')
+                                      ? gitaProvider.gitaModalList[selectIndex]
+                                          .verses[index].language.Sanskrit
+                                      : (homePageProviderTrue.selectLanguage ==
+                                              'Hindi')
+                                          ? gitaProvider
+                                              .gitaModalList[selectIndex]
+                                              .verses[index]
+                                              .language
+                                              .Hindi
+                                          : (homePageProviderTrue
+                                                      .selectLanguage ==
+                                                  'English')
+                                              ? gitaProvider
+                                                  .gitaModalList[selectIndex]
+                                                  .verses[index]
+                                                  .language
+                                                  .English
+                                              : gitaProvider
+                                                  .gitaModalList[selectIndex]
+                                                  .verses[index]
+                                                  .language
+                                                  .Gujarati,
+                                  // gitaProvider.gitaModalList[selectIndex].verses[index]
+                                  //     .language.Sanskrit,
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                    fontSize: 20,
+                                    shadows: [
+                                      Shadow(
+                                        color: Colors.white,
+                                        blurRadius: 15,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         )
                       ],
