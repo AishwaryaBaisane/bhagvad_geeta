@@ -1,4 +1,22 @@
-# bhagvad_geeta
+# bhagvad_geeta 
+
+The app aims to create an immersive and personalized experience for users seeking
+spiritual guidance through the teachings of the Bhagvat Geeta. By incorporating local JSON
+storage, Shared Preferences, like functionality, themes, chapter images, splash screens, detailed
+verse screens, and multi-language support, the app offers a comprehensive solution for users to
+explore and engage with this sacred text.
+
+🌐 Multilingual Support:-
+- Easily switch between languages including Gujarati, Hindi, Sanskrit, and English.
+- The app adapts dynamically, offering you the sacred text in the language of your choice.
+
+🎨 Theme Customization:-
+- Personalize your reading experience with our theme change feature.
+- Whether you prefer a light or dark mode, our app has got you covered.
+
+📚 Comprehensive Content:-
+- Access all 18 chapters and 700 shlokas of the Bhagavad Gita.
+- Explore the verses in depth and gain insights into the profound teachings.
 
 <p>
   <img src = "https://github.com/user-attachments/assets/8227c6df-d1f2-40a8-9cb6-d6f2e47cb771" height = 25% width = 25%>
@@ -12,6 +30,8 @@
 </p>
 
 
+<div align="center">
+<video height="550" src="https://github.com/user-attachments/assets/31b41604-ecc6-42a8-a025-0412a9a245d5">
+</div>
 
-https://github.com/user-attachments/assets/31b41604-ecc6-42a8-a025-0412a9a245d5
 
