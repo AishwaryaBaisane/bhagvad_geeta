@@ -26,7 +26,6 @@ explore and engage with this sacred text.
    <img src = "https://github.com/user-attachments/assets/c50fc030-7fb2-4258-96d1-7f646c2a9091" height = 25% width = 25%>
    <img src = "https://github.com/user-attachments/assets/6b051595-8483-48a6-9b03-6baa01685402" height = 25% width = 25%>
    <img src = "https://github.com/user-attachments/assets/99a25cf6-db51-4391-ac9f-8a4716c2aa0c" height = 25% width = 25%>
-  
 </p>
 
 
